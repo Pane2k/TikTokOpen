@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Таймер</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: "Roboto Mono", monospace;
+        }
+        #timerWrap {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            margin-top: 20px;
+            
+        }
+        #timer {
+           
+            
+
+            white-space-collapse: collapse;
+            display: flex;
+            font-size: 9vw;
+            justify-content: center;
+            
+            font-weight: 900;
+            color: rgb(255, 255, 255);
+            text-shadow: 0px 1px 3px rgb(0, 0, 0),
+             1px 2px 5px rgb(0, 0, 0),
+             2px 4px 10px rgb(0, 0, 0),
+             3px 6px 15px rgb(0, 0, 0)
+             ;
+            -webkit-text-stroke: 2px rgb(0, 0, 0);
+          
+        }
+        #timer > div {
+            text-align: center;
+            transform: translateY(-3%);
+            
+            
+        }
+        #timer > div::after{
+            content: ":";
+        }
+        #timer > div:last-child::after{
+            content: "";
+        }
+
+        #labelTimer{
+            font-size: 36px;
+            font-weight: 600;
+            position: absolute;
+            bottom: 0px;
+            line-height: 0px;
+            color: #Fff;
+            -webkit-text-stroke: 2px rgb(0, 0, 0);
+            text-shadow: 0px 1px 3px rgb(0, 0, 0),
+             1px 2px 5px rgb(0, 0, 0),
+             2px 4px 10px rgb(0, 0, 0);
+        }
+        .timeToRestart__wrap{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 32px;
+            gap: 16px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="timerWrap">
+        <p id="labelTimer">Осталось</p>
+        <div id="timer">
+            <div id="days">NO</div>
+            <div id="hours">CON</div>
+            <div id="minutes">WEB</div>
+            <div id="seconds">SOKET</div>
+        </div>  
+        
+    </div>
+    <div class="timeToRestart__wrap">
+        
+        <div id="timeToRestart">
+            1000
+        </div>
+        
+    </div>
+    
+    
+    <script src="main.js"></script>
+        
+</body>
+</html>
