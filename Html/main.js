@@ -19,7 +19,7 @@ function timeNotTwoDigits(number) {
 const HEARTBEAT_INTERVAL = 1000; // Интервал heartbeat в миллисекундах
 const HEARTBEAT_VALUE = 1;     // Значение heartbeat-сообщения
 const RECONNECT_INTERVAL = 1000; // Интервал переподключения в миллисекундах
-const WS_URL = "ws://localhost:8001";
+const WS_URL = "ws://pane2k-tiktokopen.hf.space:8001";
 
 class WebSocketClient {
     constructor(url, reconnectInterval, heartbeatInterval) {
