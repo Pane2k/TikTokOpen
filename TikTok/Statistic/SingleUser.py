@@ -9,6 +9,8 @@ from datetime import datetime
 import math
 import random
 from tqdm import tqdm
+
+import logging
 # get your own ms_token from your cookies on tiktok.com
 ms_token = os.environ.get("ms_token", None)
 
@@ -90,7 +92,7 @@ async def users_videos_with_hashtag(usernameList, hashtag, blackList: dict[list]
     - `ms_token`: (Optional) TikTok API access token.
 
     '''
-    async with TikTokApi() as api:
+    async with TikTokApi(logger_name="Tiktokw.log", logging_level=logging.DEBUG) as api:
         debugPrint("Creating sessions")
         try:
             cookieFormLast: list = [openJson("Data/JSON/cookies.json")]
@@ -162,7 +164,7 @@ async def users_videos_with_hashtag(usernameList, hashtag, blackList: dict[list]
         cookietosave = await api.get_session_cookies(api.sessions[0])
         saveJson("Data/JSON/cookies.json", cookietosave)
 
-        # await getOriginalViews(api, hashtag)
+        await getOriginalViews(api, hashtag)
 
         await api.close_sessions()
         await api.stop_playwright()

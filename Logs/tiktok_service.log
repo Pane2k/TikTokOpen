@@ -1,0 +1,77 @@
+2024-12-31 18:29:22,718 - INFO - Server started on ws://localhost:8001
+2024-12-31 18:29:22,719 - INFO - Starting update_data_periodically
+2024-12-31 18:29:32,721 - DEBUG - Starting fetch_tiktok_data_periodically
+2024-12-31 18:29:32,723 - DEBUG - got TikTok data
+2024-12-31 18:30:05,174 - INFO - lastResult: {'videoCount': 1148, 'viewCount': 38832066}
+2024-12-31 18:30:13,313 - DEBUG - Websocket connection closed.
+2024-12-31 18:30:42,130 - INFO - lastResult: {'videoCount': 1148, 'viewCount': 38832068}
+2024-12-31 18:30:54,369 - DEBUG - Websocket connection closed.
+2024-12-31 18:31:17,494 - INFO - lastResult: {'videoCount': 1148, 'viewCount': 38832070}
+2024-12-31 18:31:35,378 - DEBUG - Websocket connection closed.
+2024-12-31 18:31:55,132 - INFO - lastResult: {'videoCount': 1148, 'viewCount': 38832072}
+2024-12-31 18:32:27,497 - INFO - Server started on ws://localhost:8001
+2024-12-31 18:32:27,502 - INFO - Starting update_data_periodically
+2024-12-31 18:32:41,824 - DEBUG - Starting fetch_tiktok_data_periodically
+2024-12-31 18:32:45,054 - DEBUG - got TikTok data
+2024-12-31 18:33:26,137 - INFO - lastResult: {'videoCount': 1148, 'viewCount': 38832079}
+2024-12-31 18:33:35,914 - DEBUG - Websocket connection closed.
+2024-12-31 18:33:53,160 - INFO - Server started on ws://localhost:8001
+2024-12-31 18:33:53,165 - INFO - Starting update_data_periodically
+2024-12-31 18:34:06,409 - DEBUG - Starting fetch_tiktok_data_periodically
+2024-12-31 18:34:13,417 - DEBUG - got TikTok data
+2024-12-31 18:34:44,340 - INFO - Server started on ws://localhost:8001
+2024-12-31 18:34:44,342 - INFO - Starting update_data_periodically
+2024-12-31 18:34:54,330 - DEBUG - Starting fetch_tiktok_data_periodically
+2024-12-31 18:35:13,883 - ERROR - Error getting original views: 'TikTokApi' object has no attribute 'num_sessions'
+2024-12-31 18:35:13,884 - INFO - lastResult: {'videoCount': 1148, 'viewCount': 38832079}
+2024-12-31 18:46:22,561 - INFO - Server started on ws://localhost:8001
+2024-12-31 18:46:22,562 - INFO - Starting update_data_periodically
+2024-12-31 18:46:32,565 - DEBUG - Starting fetch_tiktok_data_periodically
+2024-12-31 18:47:00,403 - ERROR - Error getting original views: 'TikTokApi' object has no attribute 'num_sessions'
+2024-12-31 18:47:00,404 - INFO - lastResult: {'videoCount': 1148, 'viewCount': 38832079}
+2024-12-31 18:47:12,818 - DEBUG - Websocket connection closed.
+2024-12-31 18:48:26,318 - INFO - Server started on ws://localhost:8001
+2024-12-31 18:48:26,323 - INFO - Starting update_data_periodically
+2024-12-31 18:49:06,110 - DEBUG - Starting fetch_tiktok_data_periodically
+2024-12-31 18:49:26,380 - ERROR - Error getting original views: 'TikTokApi' object has no attribute 'num_sessions'
+2024-12-31 18:49:26,381 - INFO - lastResult: {'videoCount': 1148, 'viewCount': 38832079}
+2024-12-31 18:49:36,275 - DEBUG - Websocket connection closed.
+2024-12-31 18:50:23,974 - DEBUG - Websocket connection closed.
+2024-12-31 18:50:43,295 - ERROR - An unexpected error occurred: 'TikTokApi' object has no attribute 'num_sessions'
+2024-12-31 18:50:47,565 - ERROR - error in _get_views_async Page closed
+=========================== logs ===========================
+navigating to "https://www.tiktok.com/@pane2kvod", waiting until "load"
+============================================================
+2024-12-31 18:53:12,560 - INFO - Server started on ws://localhost:8001
+2024-12-31 18:53:12,561 - INFO - Starting update_data_periodically
+2024-12-31 18:53:22,562 - DEBUG - Starting fetch_tiktok_data_periodically
+2024-12-31 18:53:52,030 - ERROR - Error getting original views: 'TikTokApi' object has no attribute 'num_sessions'
+2024-12-31 18:53:52,032 - INFO - lastResult: {'videoCount': 1148, 'viewCount': 38832079}
+2024-12-31 18:54:02,703 - DEBUG - Websocket connection closed.
+2024-12-31 18:54:36,664 - ERROR - An unexpected error occurred: 'TikTokApi' object has no attribute 'num_sessions'
+2024-12-31 19:00:20,191 - INFO - Server started on ws://localhost:8001
+2024-12-31 19:00:20,197 - INFO - Starting update_data_periodically
+2024-12-31 19:00:58,153 - INFO - Server started on ws://localhost:8001
+2024-12-31 19:00:58,154 - INFO - Starting update_data_periodically
+2024-12-31 19:01:08,157 - DEBUG - Starting fetch_tiktok_data_periodically
+2024-12-31 19:01:48,998 - DEBUG - Websocket connection closed.
+2024-12-31 19:01:49,938 - ERROR - Error getting original views: 'TikTokApi' object has no attribute 'num_sessions'
+2024-12-31 19:01:49,940 - INFO - lastResult: {'videoCount': 1148, 'viewCount': 38832079}
+2024-12-31 19:01:57,217 - ERROR - An unexpected error occurred: 'TikTokApi' object has no attribute 'num_sessions'
+2024-12-31 19:02:28,401 - INFO - Server started on ws://localhost:8001
+2024-12-31 19:02:28,402 - INFO - Starting update_data_periodically
+2024-12-31 19:02:38,405 - DEBUG - Starting fetch_tiktok_data_periodically
+2024-12-31 19:03:11,949 - ERROR - Error getting original views: 'TikTokApi' object has no attribute 'num_sessions'
+2024-12-31 19:03:11,950 - INFO - lastResult: {'videoCount': 1148, 'viewCount': 38832079}
+2024-12-31 19:03:18,558 - DEBUG - Websocket connection closed.
+2024-12-31 19:03:29,256 - ERROR - An unexpected error occurred: 'TikTokApi' object has no attribute 'num_sessions'
+2024-12-31 19:04:10,367 - INFO - Server started on ws://localhost:8001
+2024-12-31 19:04:10,368 - INFO - Starting update_data_periodically
+2024-12-31 19:04:20,370 - DEBUG - Starting fetch_tiktok_data_periodically
+2024-12-31 19:04:56,866 - ERROR - Error getting original views: 'TikTokApi' object has no attribute 'num_sessions'
+2024-12-31 19:04:56,867 - INFO - lastResult: {'videoCount': 1148, 'viewCount': 38832079}
+2024-12-31 19:05:00,446 - DEBUG - Websocket connection closed.
+2024-12-31 19:05:29,875 - INFO - Server started on ws://localhost:8001
+2024-12-31 19:05:29,877 - INFO - Starting update_data_periodically
+2024-12-31 19:05:39,879 - DEBUG - Starting fetch_tiktok_data_periodically
+2024-12-31 19:06:20,153 - DEBUG - Websocket connection closed.

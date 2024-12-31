@@ -51,34 +51,7 @@ async def getInfo(hashtag: str, userlistLink: str) -> dict:
     
     # ms_token = get_tiktok_cookies_from_file("Data/JSON/cookies.json")
     userlist = getUserList(userlistLink)
-    {
-    # length = len(userlist)
-    # try:
-    #     num_parts, selectedPart = openIndex()
-    #     print(f"num_parts: {num_parts}, selectedPart: {selectedPart}")
-    # except:   
-    #     print("No index.json")
-    #     num_parts = 1
-    #     selectedPart = 0
-        
-    # if selectedPart >= num_parts -1:
-    #     selectedPart = 0
-    # else:
-    #     selectedPart += 1
-    
-    # maxusersinrow = 16
-    # num_parts = length // maxusersinrow
-    
-    # if num_parts == 0:
-    #     num_parts = 1
-    # print(f"num_parts: {num_parts}, selectedPart: {selectedPart}")
-    
-    # userSmallLists = await divide_list(userlist, num_parts, selectedPart)
-    # print(f"userSmallLists: {userSmallLists}")
-    # userlist = userSmallLists
-    
-    # saveIndex({"parts": num_parts, "selectedPart": selectedPart})
-    }
+
     blackList=getBlackList("Data/JSON/blackList.json")
     
     result = await users_videos_with_hashtag(

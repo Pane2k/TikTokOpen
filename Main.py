@@ -234,12 +234,12 @@ async def getviewsAsync():
    
     while True:
         try: 
-            TTapi = TikTokApi()
+            TTapi = TikTokApi(logger_name="Tiktoka.log", logging_level=10)
             async with TTapi as apia:
                 await apia.create_sessions(
                                             
                                             num_sessions=1,
-                                            sleep_after=5,
+                                            sleep_after=10,
                                             headless=False,
                                             # executable_path="C:/Program Files/Google/Chrome/Application/chrome.exe",
                                             # browser="firefox",
@@ -293,9 +293,9 @@ async def main():
         threadUpdate.daemon = True  # Allow the main thread to exit
         threadUpdate.start()
         
-        threadGetViews = threading.Thread(target=getviews)
-        threadGetViews.daemon = True  # Allow the main thread to exit
-        threadGetViews.start()
+        # threadGetViews = threading.Thread(target=getviews)
+        # threadGetViews.daemon = True  # Allow the main thread to exit
+        # threadGetViews.start()
 
         await asyncio.Future()  # Keep the event loop running
 

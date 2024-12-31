@@ -183,7 +183,7 @@ class TikTokApi:
                 else route.continue_(),
             )
 
-        await page.goto(url)
+        await page.goto(url, timeout=0)
         await asyncio.sleep(10)
         await page.mouse.move(0,0)
         await page.mouse.move(0,100)
@@ -296,6 +296,7 @@ class TikTokApi:
                 for _ in range(num_sessions)
             )
         )
+        print(f'sessions = {self.sessions}')
         self.num_sessions = len(self.sessions)
 
     async def close_sessions(self):
@@ -304,6 +305,7 @@ class TikTokApi:
 
         This is called automatically when using the TikTokApi with "with"
         """
+        
         for session in self.sessions:
             await session.page.close()
             await session.context.close()
