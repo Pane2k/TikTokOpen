@@ -73,7 +73,7 @@ async def users_videos_with_hashtag(usernameList, hashtag, blackList: dict[list]
                                     num_sessions=1,
                                     sleep_after=20,
                                     headless=False,
-                                    executable_path="C:/Program Files/Google/Chrome/Application/chrome.exe",
+                                    # executable_path="C:/Program Files/Google/Chrome/Application/chrome.exe",
                                     #browser="firefox",
                                     override_browser_args=["--disable-blink-features=AutomationControlled"],
                                     

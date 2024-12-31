@@ -336,6 +336,7 @@ class TikTokApi:
             int: The index of the session.
             TikTokPlaywrightSession: The session.
         """
+        print(f"AAAA --- {kwargs}")
         if kwargs.get("session_index") is not None:
             i = kwargs["session_index"]
         else:

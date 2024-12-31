@@ -110,6 +110,8 @@ async def users_videos_with_hashtag(usernameList, hashtag, blackList: dict[list]
             starting_url="https://www.tiktok.com/@tiltocacto0o"
         )
 
+        
+
         debugPrint("Sessions created")
         print(blackList.get("usernames", ""))
         for username in tqdm(usernameList):
@@ -145,19 +147,12 @@ async def users_videos_with_hashtag(usernameList, hashtag, blackList: dict[list]
                         total_videos_with_tag += 1
                 debugPrint(f"save {username} {total_views}")
                 openUserInfoInJson(username=username, hashtag=hashtag)
-                if compareUserDataViewsAndSaveWithMore(
-                    openUserInfoInJson(username=username,
-                                        hashtag=hashtag),
-                    {"username": username,
-                    "total_views": total_views,
-                    "total_videos_with_tag": total_videos_with_tag}
-                    ):
-                        saveUserInfoInJson(username=username,
-                                        data={
-                                            "username": username, "total_views": total_views, "total_videos_with_tag": total_videos_with_tag},
-                                        hashtag=hashtag)
-                else:
-                    print(f"skip {username} {total_views}")
+                
+                saveUserInfoInJson(username=username,
+                                data={
+                                    "username": username, "total_views": total_views, "total_videos_with_tag": total_videos_with_tag},
+                                hashtag=hashtag)
+                
             except Exception as e:
                 print(f"Error getting videos for user {username}")
                 print(e)
@@ -166,8 +161,23 @@ async def users_videos_with_hashtag(usernameList, hashtag, blackList: dict[list]
         debugPrint("Closing sessions")
         cookietosave = await api.get_session_cookies(api.sessions[0])
         saveJson("Data/JSON/cookies.json", cookietosave)
+
+        # await getOriginalViews(api, hashtag)
+
         await api.close_sessions()
         await api.stop_playwright()
+
+async def getOriginalViews(api: TikTokApi, hashtag):
+    tag =  api.hashtag(name=hashtag)
+    hashtag_data = await tag.info()
+
+    videoCount = hashtag_data['challengeInfo']['statsV2']['videoCount']
+    viewCount  = hashtag_data['challengeInfo']['statsV2']['viewCount']
+
+    saveJson("Data/JSON/RawHashtagStats.json", {"videoCount": videoCount,
+                                            "viewCount": viewCount})
+    print("getOriginalViews done")
+
 
 if __name__ == "__main__":
     os.environ["DEBUG"] = "True"

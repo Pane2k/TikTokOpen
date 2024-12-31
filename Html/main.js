@@ -5,6 +5,10 @@ let seconds = document.getElementById("seconds");
 
 let interval = document.getElementById("timeToRestart");
 
+
+let views = document.getElementById('views')
+let videos = document.getElementById('videos')
+
 function timeNotTwoDigits(number) {
     if (number < 10 && number >= 0) {
         return "0" + number;
@@ -19,7 +23,13 @@ function timeNotTwoDigits(number) {
 const HEARTBEAT_INTERVAL = 1000; // Интервал heartbeat в миллисекундах
 const HEARTBEAT_VALUE = 1;     // Значение heartbeat-сообщения
 const RECONNECT_INTERVAL = 1000; // Интервал переподключения в миллисекундах
-const WS_URL = "ws://pane2k-tiktokopen.hf.space:8001";
+let WS_URL = "ws://localhost:8001";
+
+let afterQ = document.location.href.split('?=')[1]
+if (afterQ){
+    WS_URL = "ws://" + afterQ 
+}
+
 
 class WebSocketClient {
     constructor(url, reconnectInterval, heartbeatInterval) {
@@ -110,9 +120,13 @@ class WebSocketClient {
     onMessage(event) {
         try {
              let data = JSON.parse(event.data);
-             this.setTimerFromWSData(data.data.time);
-             this.setReloadTimeFromWSData(data.data.timerToRestart);
-             this.setTextUpdating(data.data.isUpdating);
+             console.log(data)
+             views.innerHTML = data.data.views
+             videos.innerHTML = data.data.videos
+            //  this.setTimerFromWSData(data.data.time);
+            //  this.setReloadTimeFromWSData(data.data.timerToRestart);
+            //  this.setTextUpdating(data.data.isUpdating);
+            
              
         } catch (e) {
             console.log("Получено некорректное сообщение", event.data)
@@ -127,17 +141,17 @@ class WebSocketClient {
         console.log("Произошла ошибка:", error)
     }
 
-    setTimerFromWSData(data) {
-        let time = data;
-        let days_ = Math.floor(time / (60 * 60 * 24));
-        let hours_ = Math.floor(time / (60 * 60)) % 24;
-        let minutes_ = Math.floor(time / 60) % 60;
-        let seconds_ = time % 60;
-        days.innerHTML = timeNotTwoDigits(days_);
-        hours.innerHTML = timeNotTwoDigits(hours_);
-        minutes.innerHTML = timeNotTwoDigits(minutes_);
-        seconds.innerHTML = timeNotTwoDigits(seconds_);
-    }
+    // setTimerFromWSData(data) {
+    //     let time = data;
+    //     let days_ = Math.floor(time / (60 * 60 * 24));
+    //     let hours_ = Math.floor(time / (60 * 60)) % 24;
+    //     let minutes_ = Math.floor(time / 60) % 60;
+    //     let seconds_ = time % 60;
+    //     days.innerHTML = timeNotTwoDigits(days_);
+    //     hours.innerHTML = timeNotTwoDigits(hours_);
+    //     minutes.innerHTML = timeNotTwoDigits(minutes_);
+    //     seconds.innerHTML = timeNotTwoDigits(seconds_);
+    // }
     setReloadTimeFromWSData(data) {
         let time = data;
         interval.innerHTML = `Обновление через - ${time} секунд`;
