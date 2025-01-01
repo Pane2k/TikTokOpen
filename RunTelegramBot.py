@@ -6,7 +6,7 @@ from threading import Lock
 import hashlib
 
 # Загрузка переменных окружения
-BOT_TOKEN = "8125648329:AAEZoJxUF0XmzKwDobFhYmpsJLcKN_OE7mY"
+BOT_TOKEN = "BOTTOKEN"
 ADMINS_FILE = "TelegramData/admins.txt" # Если не задана, по умолчанию admins.txt
 
 # Путь к файлу blacklist
