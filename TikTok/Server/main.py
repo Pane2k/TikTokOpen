@@ -47,15 +47,14 @@ def openIndex() -> tuple:
     
     return index["parts"], index["selectedPart"]
             
-async def getInfo(hashtag: str, userlistLink: str) -> dict:
+async def getInfo(hashtag: str) -> dict:
     
     # ms_token = get_tiktok_cookies_from_file("Data/JSON/cookies.json")
-    userlist = getUserList(userlistLink)
 
-    blackList=getBlackList("Data/JSON/blackList.json")
+
+    blackList = getBlackList("TelegramData/blacklist.json")
     
     result = await users_videos_with_hashtag(
-        usernameList=userlist,
         hashtag=hashtag,
         blackList=blackList
         )

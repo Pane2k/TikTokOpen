@@ -249,3 +249,170 @@ navigating to "https://www.tiktok.com/@pane2kvod", waiting until "load"
 2024-12-31 23:47:47,691 - DEBUG - [90mWebsocket connection closed.[0m
 2024-12-31 23:49:41,061 - ERROR - [31mAn unexpected error occurred: Timeout 30000ms exceeded.[0m
 2024-12-31 23:52:02,399 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2024-12-31 23:54:17,292 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2024-12-31 23:56:30,602 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2024-12-31 23:58:41,493 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 00:00:49,521 - DEBUG - [90mWebsocket connection closed.[0m
+2025-01-01 00:00:49,836 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 00:03:03,690 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 00:05:11,739 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 00:07:20,056 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 00:09:31,920 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 00:11:42,275 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 00:13:49,830 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 00:13:51,575 - DEBUG - [90mWebsocket connection closed.[0m
+2025-01-01 00:16:02,651 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 00:18:15,111 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 00:20:26,889 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 00:22:39,673 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 00:24:46,743 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 00:26:53,709 - DEBUG - [90mWebsocket connection closed.[0m
+2025-01-01 00:26:56,347 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 00:29:01,953 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 00:31:13,464 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 00:33:19,544 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 00:35:28,100 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 00:37:38,992 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 00:39:49,631 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 00:39:55,654 - DEBUG - [90mWebsocket connection closed.[0m
+2025-01-01 00:41:59,084 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 00:44:08,195 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 00:46:16,967 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 00:48:28,161 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 00:50:36,556 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 00:52:52,564 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 00:52:57,702 - DEBUG - [90mWebsocket connection closed.[0m
+2025-01-01 00:55:02,404 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 00:57:14,118 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 00:59:28,334 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 01:01:37,036 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 01:03:45,550 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 01:05:54,744 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 01:05:59,624 - DEBUG - [90mWebsocket connection closed.[0m
+2025-01-01 01:08:04,620 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 01:10:14,810 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 01:12:25,436 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 01:14:35,391 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 01:16:40,230 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 01:18:49,907 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 01:19:01,639 - DEBUG - [90mWebsocket connection closed.[0m
+2025-01-01 01:20:58,808 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 01:23:07,374 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 01:25:15,926 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 01:27:24,325 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 01:29:31,017 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 01:31:36,367 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 01:32:03,652 - DEBUG - [90mWebsocket connection closed.[0m
+2025-01-01 01:33:42,381 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 01:35:54,902 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 01:38:03,377 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 01:40:11,470 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 01:42:18,397 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 01:44:27,998 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 01:45:05,568 - DEBUG - [90mWebsocket connection closed.[0m
+2025-01-01 01:46:36,621 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 01:48:48,016 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 01:50:59,467 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 01:53:09,631 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 01:55:17,528 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 01:57:27,237 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 01:57:47,646 - DEBUG - [90mWebsocket connection closed.[0m
+2025-01-01 01:59:39,540 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 02:01:50,979 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 02:03:57,986 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 02:06:06,236 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 02:08:16,573 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 02:10:24,318 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 02:10:49,629 - DEBUG - [90mWebsocket connection closed.[0m
+2025-01-01 02:12:30,127 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 02:14:37,126 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 02:16:46,250 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 02:18:57,880 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 02:21:07,627 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 02:23:15,178 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 02:23:51,684 - DEBUG - [90mWebsocket connection closed.[0m
+2025-01-01 02:25:22,113 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 02:27:29,410 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 02:29:35,595 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 02:31:43,534 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 02:33:54,570 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 02:36:01,592 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 02:36:53,682 - DEBUG - [90mWebsocket connection closed.[0m
+2025-01-01 02:38:14,439 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 02:40:27,547 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 02:42:33,069 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 02:44:43,438 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 02:46:55,000 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 02:49:05,506 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 02:49:55,690 - DEBUG - [90mWebsocket connection closed.[0m
+2025-01-01 02:51:12,392 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 02:53:24,642 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 02:55:32,102 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 02:57:38,440 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 02:59:50,323 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 03:02:00,396 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 03:02:57,624 - DEBUG - [90mWebsocket connection closed.[0m
+2025-01-01 03:04:08,239 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 03:06:12,584 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 03:08:36,319 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 03:10:43,097 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 03:12:55,339 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 03:15:11,275 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 03:15:59,609 - DEBUG - [90mWebsocket connection closed.[0m
+2025-01-01 03:17:30,284 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 03:19:45,711 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 03:22:03,011 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 03:24:23,004 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 03:26:39,958 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 03:28:57,599 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 03:29:01,708 - DEBUG - [90mWebsocket connection closed.[0m
+2025-01-01 03:31:10,521 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 03:33:15,289 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 03:35:20,746 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 03:37:35,822 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 03:39:54,662 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 03:42:03,694 - DEBUG - [90mWebsocket connection closed.[0m
+2025-01-01 03:42:09,631 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 03:44:24,747 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 03:46:36,568 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 03:49:01,851 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 03:51:13,154 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 03:53:28,487 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 03:55:05,553 - DEBUG - [90mWebsocket connection closed.[0m
+2025-01-01 03:55:43,441 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 03:58:01,627 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 04:00:21,571 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 04:02:46,729 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 04:05:11,311 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 04:07:31,904 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 04:07:47,728 - DEBUG - [90mWebsocket connection closed.[0m
+2025-01-01 04:09:45,125 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 04:11:57,258 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 04:14:16,413 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 04:16:28,173 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 04:18:39,347 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 04:20:49,731 - DEBUG - [90mWebsocket connection closed.[0m
+2025-01-01 04:20:56,500 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 04:23:11,478 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 04:25:25,471 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 04:27:36,952 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 04:29:48,232 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 04:32:03,914 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 04:33:51,665 - DEBUG - [90mWebsocket connection closed.[0m
+2025-01-01 04:34:20,089 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 04:34:33,285 - DEBUG - [90mWebsocket connection closed.[0m
+2025-01-01 04:35:15,263 - DEBUG - [90mWebsocket connection closed.[0m
+2025-01-01 04:36:33,116 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 22:01:11,225 - INFO - [96mServer started on ws://0.0.0.0:8001[0m
+2025-01-01 22:01:11,226 - INFO - [33mStarting update_data_periodically[0m
+2025-01-01 22:01:11,229 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 22:02:12,539 - ERROR - [31mAn unexpected error occurred: 'blockUsers'[0m
+2025-01-01 22:04:23,105 - INFO - [96mServer started on ws://0.0.0.0:8001[0m
+2025-01-01 22:04:23,107 - INFO - [33mStarting update_data_periodically[0m
+2025-01-01 22:04:23,108 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 22:06:17,441 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 22:08:19,027 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 22:09:21,901 - INFO - [96mServer started on ws://0.0.0.0:8001[0m
+2025-01-01 22:09:21,904 - INFO - [33mStarting update_data_periodically[0m
+2025-01-01 22:09:21,905 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2025-01-01 22:11:13,845 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m

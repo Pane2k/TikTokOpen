@@ -82,7 +82,7 @@ def debugPrint(text):
     pass
 
 
-async def users_videos_with_hashtag(usernameList, hashtag, blackList: dict[list] = None, ms_token: str = None):
+async def users_videos_with_hashtag(hashtag, blackList: dict[list] = None, ms_token: str = None):
     '''
     Asynchronous function that retrieves TikTok videos with a specific hashtag for a list of usernames, and saves the user's total views and total videos with the hashtag to a JSON file.
 
@@ -116,7 +116,7 @@ async def users_videos_with_hashtag(usernameList, hashtag, blackList: dict[list]
         
 
         debugPrint("Sessions created")
-        tq = tqdm(usernameList)
+        tq = tqdm(blackList["blockUsers"])
         for username in tq:
             tq.set_description(f"{cp.MAGENTA}Processing '{username}'{cp.RESET}")
             debugPrint(f"Getting user {username}")
@@ -161,14 +161,14 @@ async def users_videos_with_hashtag(usernameList, hashtag, blackList: dict[list]
         
         blVideos = 0
         blViews = 0
-        for videoBlack in blackList["videos"]:
+        for videoBlack in blackList["blockVideos"]:
             try:
                 
                 vid = api.video(url=f'{videoBlack}')
                 
                 s = await vid.info()
                 
-                if vid.author.username in usernameList:
+                if vid.author.username in blackList["blockUsers"]:
                     #print('user in list')
                     continue
                 vidHT = vid.hashtags
