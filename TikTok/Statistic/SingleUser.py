@@ -9,6 +9,7 @@ from datetime import datetime
 import math
 import random
 from tqdm import tqdm
+import colorprint as cp
 
 import logging
 # get your own ms_token from your cookies on tiktok.com
@@ -115,12 +116,9 @@ async def users_videos_with_hashtag(usernameList, hashtag, blackList: dict[list]
         
 
         debugPrint("Sessions created")
-        print(blackList.get("usernames", ""))
-        for username in tqdm(usernameList):
-            if username in blackList.get("usernames", ""):
-                debugPrint(
-                    f"Skipping user {username} because it is in the blacklist")
-                continue
+        tq = tqdm(usernameList)
+        for username in tq:
+            tq.set_description(f"{cp.MAGENTA}Processing '{username}'{cp.RESET}")
             debugPrint(f"Getting user {username}")
             debugPrint(f"username = {username}")
 
@@ -139,8 +137,7 @@ async def users_videos_with_hashtag(usernameList, hashtag, blackList: dict[list]
             total_videos_with_tag = 0
             try:
                 async for video in user.videos(count=videosLen):
-                    if video.id in blackList.get("videos", []):
-                        continue
+                    
                     video: Video
 
                     play_count = int(video.stats.get("playCount", 0))
@@ -160,6 +157,35 @@ async def users_videos_with_hashtag(usernameList, hashtag, blackList: dict[list]
                 print(e)
                 continue
             await asyncio.sleep(random.uniform(0.5, 1.5))
+        
+        
+        blVideos = 0
+        blViews = 0
+        for videoBlack in blackList["videos"]:
+            try:
+                
+                vid = api.video(url=f'{videoBlack}')
+                
+                s = await vid.info()
+                
+                if vid.author.username in usernameList:
+                    #print('user in list')
+                    continue
+                vidHT = vid.hashtags
+                for vht in vidHT:
+                    
+                    if(vht.name == hashtag):
+                        
+                        vidstat = vid.stats
+                        blViews += int(vidstat["playCount"])
+                        blVideos += 1
+                        break
+            except:
+                print(f"no {videoBlack}")
+     
+        saveJson("Data/JSON/blackListStats.json", {"blacklistViews": blViews, "blacklistVideos": blVideos})
+        
+
         debugPrint("Closing sessions")
         cookietosave = await api.get_session_cookies(api.sessions[0])
         saveJson("Data/JSON/cookies.json", cookietosave)
@@ -178,7 +204,7 @@ async def getOriginalViews(api: TikTokApi, hashtag):
 
     saveJson("Data/JSON/RawHashtagStats.json", {"videoCount": videoCount,
                                             "viewCount": viewCount})
-    print("getOriginalViews done")
+
 
 
 if __name__ == "__main__":

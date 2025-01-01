@@ -1,77 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Таймер</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
-    <style>
-        *{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body{
-            font-family: "Roboto Mono", monospace;
-            font-size:10vw;
-            font-weight: 300;
-            background-color: transparent;
-            
-        }
-        .viewsWrap,.videosWrap{
-            
-            color: rgb(255, 255, 255);
-            display: flex;
-            flex-direction: column;
-            align-items: flex-end;
-            gap: 6px;
-            
-        }
-        .viewsWrap >p,.videosWrap >p{
-            /* background-color: rgba(0, 0, 0, 0.6);
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Таймер</title>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+            rel="stylesheet"
+        />
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            body {
+                font-family: "Roboto Mono", monospace;
+                font-size: 10vw;
+                font-weight: 300;
+                background-color: rebeccapurple;
+            }
+            .viewsWrap,
+            .videosWrap {
+                color: rgb(255, 255, 255);
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                gap: 6px;
+            }
+            .viewsWrap > p,
+            .videosWrap > p {
+                /* background-color: rgba(0, 0, 0, 0.6);
             background-image: linear-gradient(0deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.2));
             border-radius: 100px;
             padding: 0px 16px;
             border: 1px solid rgb(0, 255, 0); */
-        }
-        .mainWrap{
-            
-            background-clip: text;
-            position: relative;
-            margin: 0 auto;
-            width: fit-content;
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-            transition: 1s;
-            
-            background-clip: text;
-            
-        }
-        
-        
-        #views,#videos{
-            font-size: 1.2em;
-            font-weight: 400;
-            
-        }
-    </style>
-</head>
-<body>
-    <div class="mainWrap">
-        <div class="rotator"></div>
-    <div class="viewsWrap">
-        <p>ПРОСМОТРЫ</p>
-        <p id="views">0</p>
-    </div>
-    <div class="videosWrap">
-        <p>ВЫЛОЖЕНО ВИДЕО</p>
-        <p id="videos">0</p>
-    </div>
-</div>
-    
-    
-    <script src="main.js"></script>
-        
-</body>
+            }
+            .mainWrap {
+                background-clip: text;
+                position: relative;
+                margin: 0 auto;
+                width: fit-content;
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+                transition: 1s;
+
+                background-clip: text;
+            }
+
+            #views,
+            #videos {
+                font-size: 1.2em;
+                font-weight: 400;
+                
+            }
+        </style>
+    </head>
+    <body>
+        <div class="mainWrap">
+            <div class="rotator"></div>
+            <div class="viewsWrap">
+                <p>ПРОСМОТРЫ</p>
+                <p id="views">0</p>
+            </div>
+            <div class="videosWrap">
+                <p>ВЫЛОЖЕНО ВИДЕО</p>
+                <p id="videos">0</p>
+            </div>
+        </div>
+
+        <script src="main.js"></script>
+    </body>
 </html>

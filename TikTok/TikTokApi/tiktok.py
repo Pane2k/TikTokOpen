@@ -147,7 +147,6 @@ class TikTokApi:
         cookies: dict = None,
         suppress_resource_load_types: list[str] = None,
     ):
-        print("Creating session...")
         """Create a TikTokPlaywrightSession"""
         if ms_token is not None:
             if cookies is None:
@@ -185,8 +184,8 @@ class TikTokApi:
 
         await page.goto(url, timeout=0)
         await asyncio.sleep(10)
-        await page.mouse.move(0,0)
-        await page.mouse.move(0,100)
+        await page.mouse.move(0, 0)
+        await page.mouse.move(0, 100)
 
         session = TikTokPlaywrightSession(
             context,
@@ -198,7 +197,7 @@ class TikTokApi:
         )
         if ms_token is None:
             time.sleep(sleep_after)  # TODO: Find a better way to wait for msToken
-            
+
             cookies = await self.get_session_cookies(session)
             with open("cookies.json", "w") as f:
                 json.dump(cookies, f)
@@ -224,7 +223,7 @@ class TikTokApi:
         cookies: list[dict] = None,
         suppress_resource_load_types: list[str] = None,
         browser: str = "chromium",
-        executable_path: str = None
+        executable_path: str = None,
     ):
         """
         Create sessions for use within the TikTokApi class.
@@ -258,14 +257,16 @@ class TikTokApi:
             if headless and override_browser_args is None:
                 override_browser_args = ["--headless=new"]
                 headless = False  # managed by the arg
-   
+
             # self.browser = await self.playwright.chromium.launch_persistent_context(
-            #     user_data_dir= 
+            #     user_data_dir=
             #     headless=headless, args=override_browser_args, proxy=random_choice(proxies), executable_path=executable_path
             # )
             self.browser = await self.playwright.chromium.launch(
-                
-                headless=headless, args=override_browser_args, proxy=random_choice(proxies), executable_path=executable_path
+                headless=headless,
+                args=override_browser_args,
+                proxy=random_choice(proxies),
+                executable_path=executable_path,
             )
         elif browser == "firefox":
             # self.browser = await self.playwright.firefox.launch_persistent_context(
@@ -273,11 +274,17 @@ class TikTokApi:
             #     headless=headless, args=override_browser_args, proxy=random_choice(proxies), executable_path=executable_path
             # )
             self.browser = await self.playwright.firefox.launch(
-                headless=headless, args=override_browser_args, proxy=random_choice(proxies), executable_path=executable_path
+                headless=headless,
+                args=override_browser_args,
+                proxy=random_choice(proxies),
+                executable_path=executable_path,
             )
         elif browser == "webkit":
             self.browser = await self.playwright.webkit.launch(
-                headless=headless, args=override_browser_args, proxy=random_choice(proxies), executable_path=executable_path
+                headless=headless,
+                args=override_browser_args,
+                proxy=random_choice(proxies),
+                executable_path=executable_path,
             )
         else:
             raise ValueError("Invalid browser argument passed")
@@ -296,7 +303,7 @@ class TikTokApi:
                 for _ in range(num_sessions)
             )
         )
-        print(f'sessions = {self.sessions}')
+
         self.num_sessions = len(self.sessions)
 
     async def close_sessions(self):
@@ -305,7 +312,7 @@ class TikTokApi:
 
         This is called automatically when using the TikTokApi with "with"
         """
-        
+
         for session in self.sessions:
             await session.page.close()
             await session.context.close()
@@ -338,7 +345,7 @@ class TikTokApi:
             int: The index of the session.
             TikTokPlaywrightSession: The session.
         """
-        print(f"AAAA --- {kwargs}")
+
         if kwargs.get("session_index") is not None:
             i = kwargs["session_index"]
         else:
@@ -476,7 +483,9 @@ class TikTokApi:
                 raise Exception("TikTokApi.run_fetch_script returned None")
 
             if result == "":
-                raise EmptyResponseException(result, "TikTok returned an empty response")
+                raise EmptyResponseException(
+                    result, "TikTok returned an empty response"
+                )
 
             try:
                 data = json.loads(result)
@@ -511,7 +520,7 @@ class TikTokApi:
     async def get_session_content(self, url: str, **kwargs):
         """Get the content of a url"""
         _, session = self._get_session(**kwargs)
-        
+
         return await session.page.content()
 
     async def __aenter__(self):

@@ -75,3 +75,177 @@ navigating to "https://www.tiktok.com/@pane2kvod", waiting until "load"
 2024-12-31 19:05:29,877 - INFO - Starting update_data_periodically
 2024-12-31 19:05:39,879 - DEBUG - Starting fetch_tiktok_data_periodically
 2024-12-31 19:06:20,153 - DEBUG - Websocket connection closed.
+2024-12-31 19:11:49,668 - INFO - Server started on ws://localhost:8001
+2024-12-31 19:11:49,669 - INFO - Starting update_data_periodically
+2024-12-31 19:11:59,671 - DEBUG - Starting fetch_tiktok_data_periodically
+2024-12-31 19:12:20,514 - INFO - lastResult: {'videoCount': 1148, 'viewCount': 38832237}
+2024-12-31 19:12:20,644 - ERROR - error in _get_views_async Task <Task pending name='Task-6' coro=<TikTokDataService._get_views_async() running at d:\tiktokOpen\TikTokOpen\testmain.py:217> cb=[_run_until_complete_cb() at C:\Users\Lenovo\AppData\Local\Programs\Python\Python310\lib\asyncio\base_events.py:184, ProtocolCallback.__init__.<locals>.cb() at D:\tiktokOpen\TikTokOpen\.venv\lib\site-packages\playwright\_impl\_connection.py:190]> got Future <Future pending> attached to a different loop
+2024-12-31 19:12:39,943 - DEBUG - Websocket connection closed.
+2024-12-31 19:19:37,623 - INFO - Server started on ws://localhost:8001
+2024-12-31 19:19:37,624 - INFO - Starting update_data_periodically
+2024-12-31 19:19:47,626 - DEBUG - Starting fetch_tiktok_data_periodically
+2024-12-31 19:19:47,628 - ERROR - An unexpected error occurred: users_videos_with_hashtag() got an unexpected keyword argument 'api'
+2024-12-31 19:19:51,630 - ERROR - An unexpected error occurred: users_videos_with_hashtag() got an unexpected keyword argument 'api'
+2024-12-31 19:19:55,633 - ERROR - An unexpected error occurred: users_videos_with_hashtag() got an unexpected keyword argument 'api'
+2024-12-31 19:20:28,921 - INFO - Server started on ws://localhost:8001
+2024-12-31 19:20:28,922 - INFO - Starting update_data_periodically
+2024-12-31 19:20:38,925 - DEBUG - Starting fetch_tiktok_data_periodically
+2024-12-31 19:21:02,096 - INFO - lastResult: {'videoCount': 1148, 'viewCount': 38832265}
+2024-12-31 19:21:02,222 - ERROR - error in _get_views_async Task <Task pending name='Task-6' coro=<TikTokDataService._get_views_async() running at d:\tiktokOpen\TikTokOpen\testmain.py:217> cb=[_run_until_complete_cb() at C:\Users\Lenovo\AppData\Local\Programs\Python\Python310\lib\asyncio\base_events.py:184, ProtocolCallback.__init__.<locals>.cb() at D:\tiktokOpen\TikTokOpen\.venv\lib\site-packages\playwright\_impl\_connection.py:190]> got Future <Future pending> attached to a different loop
+2024-12-31 19:21:19,699 - DEBUG - Websocket connection closed.
+2024-12-31 19:23:27,374 - INFO - Server started on ws://localhost:8001
+2024-12-31 19:23:27,375 - INFO - Starting update_data_periodically
+2024-12-31 19:23:59,020 - INFO - Server started on ws://localhost:8001
+2024-12-31 19:23:59,021 - INFO - Starting update_data_periodically
+2024-12-31 19:23:59,022 - DEBUG - Starting fetch_tiktok_data_periodically
+2024-12-31 19:23:59,023 - ERROR - An unexpected error occurred: getInfo() missing 1 required positional argument: 'api'
+2024-12-31 19:24:03,024 - ERROR - An unexpected error occurred: getInfo() missing 1 required positional argument: 'api'
+2024-12-31 19:24:07,024 - ERROR - An unexpected error occurred: getInfo() missing 1 required positional argument: 'api'
+2024-12-31 19:24:49,545 - DEBUG - Websocket connection closed.
+2024-12-31 19:25:49,700 - INFO - Server started on ws://localhost:8001
+2024-12-31 19:25:49,702 - INFO - Starting update_data_periodically
+2024-12-31 19:25:49,703 - DEBUG - Starting fetch_tiktok_data_periodically
+2024-12-31 19:26:40,315 - DEBUG - Websocket connection closed.
+2024-12-31 19:27:02,521 - DEBUG - got TikTok data
+2024-12-31 19:27:21,344 - DEBUG - Websocket connection closed.
+2024-12-31 19:28:20,818 - INFO - Server started on ws://localhost:8001
+2024-12-31 19:28:20,819 - INFO - Starting update_data_periodically
+2024-12-31 19:28:20,820 - DEBUG - Starting fetch_tiktok_data_periodically
+2024-12-31 19:29:11,803 - DEBUG - Websocket connection closed.
+2024-12-31 19:29:34,675 - DEBUG - got TikTok data
+2024-12-31 19:29:52,803 - DEBUG - Websocket connection closed.
+2024-12-31 19:30:33,823 - DEBUG - Websocket connection closed.
+2024-12-31 19:31:14,816 - DEBUG - Websocket connection closed.
+2024-12-31 19:31:55,827 - DEBUG - Websocket connection closed.
+2024-12-31 19:32:36,821 - DEBUG - Websocket connection closed.
+2024-12-31 19:33:17,831 - DEBUG - Websocket connection closed.
+2024-12-31 19:33:58,843 - DEBUG - Websocket connection closed.
+2024-12-31 19:34:34,709 - DEBUG - Starting fetch_tiktok_data_periodically
+2024-12-31 19:34:39,838 - DEBUG - Websocket connection closed.
+2024-12-31 19:35:20,857 - DEBUG - Websocket connection closed.
+2024-12-31 19:36:01,857 - DEBUG - Websocket connection closed.
+2024-12-31 19:36:15,648 - DEBUG - got TikTok data
+2024-12-31 19:36:42,858 - DEBUG - Websocket connection closed.
+2024-12-31 19:37:03,048 - INFO - Server started on ws://localhost:8001
+2024-12-31 19:37:03,050 - INFO - Starting update_data_periodically
+2024-12-31 19:37:03,051 - DEBUG - Starting fetch_tiktok_data_periodically
+2024-12-31 19:37:53,284 - DEBUG - Websocket connection closed.
+2024-12-31 19:38:21,672 - DEBUG - got TikTok data
+2024-12-31 19:38:34,284 - DEBUG - Websocket connection closed.
+2024-12-31 19:39:15,308 - DEBUG - Websocket connection closed.
+2024-12-31 19:39:21,683 - DEBUG - Starting fetch_tiktok_data_periodically
+2024-12-31 19:39:56,305 - DEBUG - Websocket connection closed.
+2024-12-31 19:40:37,307 - DEBUG - Websocket connection closed.
+2024-12-31 19:40:41,316 - DEBUG - got TikTok data
+2024-12-31 20:07:58,416 - INFO - Server started on ws://localhost:8001
+2024-12-31 20:07:58,418 - INFO - Starting update_data_periodically
+2024-12-31 20:07:58,420 - DEBUG - Starting fetch_tiktok_data_periodically
+2024-12-31 20:08:48,725 - DEBUG - Websocket connection closed.
+2024-12-31 20:09:08,181 - ERROR - An unexpected error occurred: 'async for' requires an object with __aiter__ method, got list
+2024-12-31 20:09:28,469 - INFO - Server started on ws://localhost:8001
+2024-12-31 20:09:28,471 - INFO - Starting update_data_periodically
+2024-12-31 20:09:28,472 - DEBUG - Starting fetch_tiktok_data_periodically
+2024-12-31 20:10:18,622 - DEBUG - Websocket connection closed.
+2024-12-31 20:10:52,638 - DEBUG - got TikTok data
+2024-12-31 21:31:21,566 - INFO - Server started on ws://localhost:8001
+2024-12-31 21:31:21,568 - INFO - Starting update_data_periodically
+2024-12-31 21:31:21,569 - DEBUG - Starting fetch_tiktok_data_periodically
+2024-12-31 21:32:49,353 - DEBUG - got TikTok data
+2024-12-31 21:33:49,382 - DEBUG - Starting fetch_tiktok_data_periodically
+2024-12-31 21:34:22,830 - DEBUG - Websocket connection closed.
+2024-12-31 21:35:23,979 - DEBUG - Websocket connection closed.
+2024-12-31 21:35:31,261 - DEBUG - got TikTok data
+2024-12-31 21:36:31,306 - DEBUG - Starting fetch_tiktok_data_periodically
+2024-12-31 21:37:07,753 - INFO - Server started on ws://localhost:8001
+2024-12-31 21:37:07,754 - INFO - Starting update_data_periodically
+2024-12-31 21:37:07,755 - DEBUG - Starting fetch_tiktok_data_periodically
+2024-12-31 21:37:21,488 - INFO - Server started on ws://localhost:8001
+2024-12-31 21:37:21,494 - INFO - Starting update_data_periodically
+2024-12-31 21:37:21,503 - DEBUG - Starting fetch_tiktok_data_periodically
+2024-12-31 21:38:51,812 - DEBUG - Websocket connection closed.
+2024-12-31 21:39:08,748 - DEBUG - got TikTok data
+2024-12-31 21:44:21,029 - INFO - Server started on ws://localhost:8001
+2024-12-31 21:44:21,030 - INFO - Starting update_data_periodically
+2024-12-31 21:44:21,031 - DEBUG - Starting fetch_tiktok_data_periodically
+2024-12-31 21:45:12,850 - DEBUG - Websocket connection closed.
+2024-12-31 21:45:54,636 - INFO - Server started on ws://localhost:8001
+2024-12-31 21:45:54,638 - INFO - Starting update_data_periodically
+2024-12-31 21:45:54,640 - DEBUG - Starting fetch_tiktok_data_periodically
+2024-12-31 21:46:44,767 - DEBUG - Websocket connection closed.
+2024-12-31 21:47:13,604 - DEBUG - got TikTok data
+2024-12-31 21:47:25,823 - DEBUG - Websocket connection closed.
+2024-12-31 21:48:13,648 - DEBUG - Starting fetch_tiktok_data_periodically
+2024-12-31 21:48:26,975 - DEBUG - Websocket connection closed.
+2024-12-31 21:49:07,984 - DEBUG - Websocket connection closed.
+2024-12-31 21:49:49,042 - DEBUG - Websocket connection closed.
+2024-12-31 21:49:59,853 - DEBUG - got TikTok data
+2024-12-31 21:50:30,059 - DEBUG - Websocket connection closed.
+2024-12-31 21:50:59,867 - DEBUG - Starting fetch_tiktok_data_periodically
+2024-12-31 21:51:11,100 - DEBUG - Websocket connection closed.
+2024-12-31 21:51:52,146 - DEBUG - Websocket connection closed.
+2024-12-31 21:52:31,905 - DEBUG - got TikTok data
+2024-12-31 21:52:33,184 - DEBUG - Websocket connection closed.
+2024-12-31 21:53:31,929 - DEBUG - Starting fetch_tiktok_data_periodically
+2024-12-31 21:55:10,328 - DEBUG - got TikTok data
+2024-12-31 21:56:10,373 - DEBUG - Starting fetch_tiktok_data_periodically
+2024-12-31 21:57:54,317 - DEBUG - got TikTok data
+2024-12-31 21:58:54,396 - DEBUG - Starting fetch_tiktok_data_periodically
+2024-12-31 21:58:55,195 - DEBUG - Websocket connection closed.
+2024-12-31 22:00:29,719 - DEBUG - got TikTok data
+2024-12-31 22:00:45,783 - INFO - Server started on ws://localhost:8001
+2024-12-31 22:00:45,785 - INFO - Starting update_data_periodically
+2024-12-31 22:00:45,786 - DEBUG - Starting fetch_tiktok_data_periodically
+2024-12-31 22:02:17,787 - DEBUG - got TikTok data
+2024-12-31 22:03:17,812 - DEBUG - Starting fetch_tiktok_data_periodically
+2024-12-31 22:04:48,665 - DEBUG - got TikTok data
+2024-12-31 22:05:39,528 - INFO - [96mServer started on ws://localhost:8001[0m
+2024-12-31 22:05:39,529 - INFO - [33mStarting update_data_periodically[0m
+2024-12-31 22:05:39,531 - DEBUG - [33mStarting fetch_tiktok_data_periodically[0m
+2024-12-31 22:08:07,743 - DEBUG - [33mStarting fetch_tiktok_data_periodically[0m
+2024-12-31 22:10:38,503 - DEBUG - [33mStarting fetch_tiktok_data_periodically[0m
+2024-12-31 22:11:55,963 - INFO - [96mServer started on ws://localhost:8001[0m
+2024-12-31 22:11:55,965 - INFO - [33mStarting update_data_periodically[0m
+2024-12-31 22:11:55,966 - DEBUG - [33mStarting fetch_tiktok_data_periodically[0m
+2024-12-31 22:14:31,557 - DEBUG - [33mStarting fetch_tiktok_data_periodically[0m
+2024-12-31 22:15:42,788 - INFO - [96mServer started on ws://localhost:8001[0m
+2024-12-31 22:15:42,789 - INFO - [33mStarting update_data_periodically[0m
+2024-12-31 22:15:42,790 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2024-12-31 22:18:16,734 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2024-12-31 22:20:56,336 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2024-12-31 22:22:54,155 - DEBUG - [90mWebsocket connection closed.[0m
+2024-12-31 22:23:32,621 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2024-12-31 22:23:35,208 - DEBUG - [90mWebsocket connection closed.[0m
+2024-12-31 22:24:16,225 - DEBUG - [90mWebsocket connection closed.[0m
+2024-12-31 22:24:57,256 - DEBUG - [90mWebsocket connection closed.[0m
+2024-12-31 22:25:38,275 - DEBUG - [90mWebsocket connection closed.[0m
+2024-12-31 22:25:49,365 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2024-12-31 22:26:39,947 - DEBUG - [90mWebsocket connection closed.[0m
+2024-12-31 22:28:32,443 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2024-12-31 22:31:17,502 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2024-12-31 22:33:34,915 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2024-12-31 22:35:56,264 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2024-12-31 22:37:22,301 - DEBUG - [90mWebsocket connection closed.[0m
+2024-12-31 22:38:22,341 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2024-12-31 22:39:03,971 - DEBUG - [90mWebsocket connection closed.[0m
+2024-12-31 22:41:03,761 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2024-12-31 22:43:42,676 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2024-12-31 22:46:10,937 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2024-12-31 22:46:46,193 - DEBUG - [90mWebsocket connection closed.[0m
+2024-12-31 22:47:47,930 - DEBUG - [90mWebsocket connection closed.[0m
+2024-12-31 22:48:36,830 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2024-12-31 23:28:22,516 - INFO - [96mServer started on ws://0.0.0.0:8001[0m
+2024-12-31 23:28:22,521 - INFO - [33mStarting update_data_periodically[0m
+2024-12-31 23:28:22,522 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2024-12-31 23:29:33,827 - INFO - [96mServer started on ws://0.0.0.0:8001[0m
+2024-12-31 23:29:33,829 - INFO - [33mStarting update_data_periodically[0m
+2024-12-31 23:29:33,830 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2024-12-31 23:32:10,456 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2024-12-31 23:34:56,177 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2024-12-31 23:35:05,448 - DEBUG - [90mWebsocket connection closed.[0m
+2024-12-31 23:37:40,535 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2024-12-31 23:40:33,382 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2024-12-31 23:42:54,927 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2024-12-31 23:45:07,175 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
+2024-12-31 23:47:47,691 - DEBUG - [90mWebsocket connection closed.[0m
+2024-12-31 23:49:41,061 - ERROR - [31mAn unexpected error occurred: Timeout 30000ms exceeded.[0m
+2024-12-31 23:52:02,399 - DEBUG - [95mStarting fetch_tiktok_data_periodically[0m
