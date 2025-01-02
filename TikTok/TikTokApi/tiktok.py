@@ -182,7 +182,7 @@ class TikTokApi:
                 else route.continue_(),
             )
 
-        await page.goto(url, timeout=0)
+        await page.goto(url)
         await asyncio.sleep(10)
         await page.mouse.move(0, 0)
         await page.mouse.move(0, 100)

@@ -105,14 +105,14 @@ async def users_videos_with_hashtag(hashtag, blackList: dict[list] = None, ms_to
                                     num_sessions=1,
                                     sleep_after=20,
                                     headless=False,
-                                    executable_path="/opt/google/chrome/google-chrome",
+                                    # executable_path="/opt/google/chrome/google-chrome",
                                     # browser="firefox",
                                     override_browser_args=[
             "--disable-blink-features=AutomationControlled"],
             cookies=cookieFormLast,
             starting_url="https://www.tiktok.com/@tiltocacto0o"
         )
-
+        
         
 
         debugPrint("Sessions created")

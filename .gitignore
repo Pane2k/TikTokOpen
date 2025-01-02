@@ -1,4 +1,5 @@
 .venv
+venv
 __pycache__
 TgBotToken.txt
 TestTiktok
@@ -8,3 +9,13 @@ tests
 a
 b
 cookies.json
+dockerfile
+bot.log
+aa.py
+aw.py
+gpt
+hello
+gradioa.py
+.gradio
+test.py
+start.bash

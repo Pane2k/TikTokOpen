@@ -4,10 +4,18 @@ import json
 import os
 from threading import Lock
 import hashlib
+import logging
+import datetime
+import colorprint as cp
+
+
+# Настройка логирования
+logging.basicConfig(filename='bot.log', level=logging.INFO, 
+                    format='%(asctime)s - %(levelname)s - %(message)s', datefmt='%Y-%m-%d %H:%M:%S')
 
 # Загрузка переменных окружения
-BOT_TOKEN = "BOTTOKEN"
-ADMINS_FILE = "TelegramData/admins.txt" # Если не задана, по умолчанию admins.txt
+BOT_TOKEN = ""
+ADMINS_FILE = "TelegramData/admins.txt"  # Если не задана, по умолчанию admins.txt
 
 # Путь к файлу blacklist
 BLACKLIST_FILE = 'TelegramData/blacklist.json'
@@ -49,7 +57,7 @@ def load_blacklist():
     except FileNotFoundError:
         return {"blockUsers": [], "blockVideos": []}
     except json.JSONDecodeError:
-      print("Error: Could not decode blacklist.json. Check if the file is valid JSON. Creating empty blacklist.")
+      logging.error("Could not decode blacklist.json. Check if the file is valid JSON. Creating empty blacklist.")
       return {"blockUsers": [], "blockVideos": []}
 
 # Сохранение данных blacklist в файл
@@ -65,7 +73,7 @@ def load_verified():
     except FileNotFoundError:
         return {"verifiedUsers": []}
     except json.JSONDecodeError:
-      print("Error: Could not decode verified.json. Check if the file is valid JSON. Creating empty verified list.")
+      logging.error("Could not decode verified.json. Check if the file is valid JSON. Creating empty verified list.")
       return {"verifiedUsers": []}
 
 # Сохранение данных verified в файл
@@ -114,9 +122,18 @@ def remove_callback_data(data_hash):
    if data_hash in callback_data_store:
         del callback_data_store[data_hash]
 
+# Логирование сообщений
+def log_message(message):
+    user = message.from_user
+    username = user.username if user.username else "None"
+    log_msg = f"User ID: {user.id}, Username: @{username}, Message: {message.text}"
+    print(f"{cp.DARK_GRAY}{datetime.datetime.now()}: {cp.GREEN}{log_msg}{cp.RESET}")
+    logging.info(log_msg)
+
 # Обработчик команды /start
 @bot.message_handler(commands=['start'])
 def start_handler(message):
+    log_message(message)
     markup = telebot.types.ReplyKeyboardMarkup(resize_keyboard=True)
     report_button = telebot.types.KeyboardButton('/report')
     verify_button = telebot.types.KeyboardButton('/verify')
@@ -126,6 +143,7 @@ def start_handler(message):
 # Обработчик команды /report
 @bot.message_handler(commands=['report'])
 def report_handler(message):
+    log_message(message)
     user_id = message.from_user.id
     can_send, remaining_time = can_send_command(user_id, 'report', REPORT_COOLDOWN)
 
@@ -140,6 +158,7 @@ def report_handler(message):
     bot.register_next_step_handler(sent_msg, process_report_text)
 
 def process_report_text(message):
+    log_message(message)
     report_text = message.text.strip()
 
     if not report_text:
@@ -204,12 +223,13 @@ def process_report_text(message):
         try:
             bot.send_message(admin_id, report_msg, reply_markup=markup)
         except Exception as e:
-            print(f"Error sending report message to admin {admin_id}: {e}")
+            logging.error(f"Error sending report message to admin {admin_id}: {e}")
 
     bot.send_message(message.chat.id, "Жалоба отправлена администраторам.")
 
 @bot.message_handler(commands=['verify'])
 def verify_handler(message):
+    log_message(message)
     user_id = message.from_user.id
     can_send, remaining_time = can_send_command(user_id, 'verify', VERIFY_COOLDOWN)
 
@@ -223,6 +243,7 @@ def verify_handler(message):
     bot.register_next_step_handler(sent_msg, process_verify_link)
 
 def process_verify_link(message):
+    log_message(message)
     tiktok_link = message.text.strip()
     user_id = message.from_user.id
     tg_username = f"@{message.from_user.username}"
@@ -262,7 +283,7 @@ def process_verify_link(message):
         try:
             bot.send_message(admin_id, verify_msg, reply_markup=markup)
         except Exception as e:
-            print(f"Error sending verify message to admin {admin_id}: {e}")
+            logging.error(f"Error sending verify message to admin {admin_id}: {e}")
     bot.send_message(message.chat.id, "Ваш запрос на верификацию отправлен администраторам.")
 
 # Обработчик нажатий на кнопки
@@ -318,7 +339,7 @@ def callback_report_handler(call):
                                  reply_markup=None)
           bot.answer_callback_query(call.id, "Действие выполнено.")
         except Exception as e:
-            print(f"Error editing message: {e}")
+            logging.error(f"Error editing message: {e}")
         finally:
             remove_callback_data(callback_hash)
 
@@ -356,12 +377,13 @@ def callback_verify_handler(call):
                                   reply_markup=None)
              bot.answer_callback_query(call.id, "Действие выполнено.")
         except Exception as e:
-          print(f"Error editing message: {e}")
+          logging.error(f"Error editing message: {e}")
         finally:
             remove_callback_data(callback_hash)
           
 @bot.message_handler(func=lambda message: True)
 def funcname(message):
+    log_message(message)
     bot.reply_to(message, "Непонимаю о чем ты говоришь. Введи /start для начала работы")
 # Запуск бота
 if __name__ == '__main__':

@@ -25,7 +25,7 @@ from tenacity import retry, stop_after_attempt, wait_exponential
 class TikTokDataService:
     def __init__(
         self,
-        hashtag="костиккакто",
+        hashtag="cacto0oбесконечныйстрим",
         userlist_link="Data/TXT/Cacto0o.txt",
         websocket_host="0.0.0.0",
         websocket_port=8001,
