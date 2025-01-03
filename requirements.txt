@@ -1,10 +1,11 @@
 asyncio
 requests>=2.31.0,<3.0
-browser_cookie3
-playwright==1.37.0
+
+
 pytelegrambotapi
 websockets
 httpx>=0.27.0,<1.0
 pystealth
 tqdm
 tenacity
+patchright

@@ -6,7 +6,7 @@ import threading
 import requests
 import datetime
 import traceback
-from playwright.async_api import async_playwright
+from patchright.async_api import async_playwright
 from TikTok.Server.main import getInfo
 from TikTok.Server.SaveTotalView import saveTotalViewAndVideos, getTotalDict
 
@@ -25,7 +25,7 @@ from tenacity import retry, stop_after_attempt, wait_exponential
 class TikTokDataService:
     def __init__(
         self,
-        hashtag="cacto0oбесконечныйстрим",
+        hashtag="#cacto0o24на7",
         userlist_link="Data/TXT/Cacto0o.txt",
         websocket_host="0.0.0.0",
         websocket_port=8001,
@@ -59,13 +59,10 @@ class TikTokDataService:
 
         return logger
 
-    @retry(
-        stop=stop_after_attempt(3), wait=wait_exponential(multiplier=1, min=4, max=10)
-    )
     async def _get_tiktok_data(self):
         try:
             data = await getInfo(self.hashtag)
-            # self.logger.debug("got TikTok data")
+            self.logger.debug("got TikTok data")
             return data
         except requests.exceptions.RequestException as e:
             self.logger.error(f"{cp.RED}Error fetching TikTok data: {e}{cp.RESET}")
@@ -220,59 +217,59 @@ class TikTokDataService:
                 self.logger.error(f"{cp.RED}Error in handler: {e}{cp.RESET}")
                 break
 
-    async def _get_original_views(self, api: TikTokApi, hashtag):
-        try:
-            tag = api.hashtag(name=hashtag)
-            hashtag_data = await tag.info()
-            videoCount = hashtag_data["challengeInfo"]["statsV2"]["videoCount"]
-            viewCount = hashtag_data["challengeInfo"]["statsV2"]["viewCount"]
-            saveJson(
-                "Data/JSON/RawHashtagStats.json",
-                {"videoCount": videoCount, "viewCount": viewCount},
-            )
-        except Exception as e:
-            self.logger.error(f"{cp.RED}Error getting original views: {e}{cp.RESET}")
+    # async def _get_original_views(self, api: TikTokApi, hashtag):
+    #     try:
+    #         tag = api.hashtag(name=hashtag)
+    #         hashtag_data = await tag.info()
+    #         videoCount = hashtag_data["challengeInfo"]["statsV2"]["videoCount"]
+    #         viewCount = hashtag_data["challengeInfo"]["statsV2"]["viewCount"]
+    #         saveJson(
+    #             "Data/JSON/RawHashtagStats.json",
+    #             {"videoCount": videoCount, "viewCount": viewCount},
+    #         )
+    #     except Exception as e:
+    #         self.logger.error(f"{cp.RED}Error getting original views: {e}{cp.RESET}")
 
-    async def _get_views_async(self):
-        while True:
-            try:
-                TTapi = TikTokApi(logger_name="Tiktoka.log", logging_level=10)
-                async with TTapi as apia:
-                    await apia.create_sessions(
-                        num_sessions=1,
-                        sleep_after=10,
-                        headless=False,
-                        override_browser_args=[
-                            "--disable-blink-features=AutomationControlled"
-                        ],
-                        starting_url="https://www.tiktok.com/@pane2kvod",
-                    )
-                    await self._get_original_views(apia, self.hashtag)
-                    result = self._open_rawDataDict()
+    # async def _get_views_async(self):
+    #     while True:
+    #         try:
+    #             TTapi = TikTokApi(logger_name="Tiktoka.log", logging_level=10)
+    #             async with TTapi as apia:
+    #                 await apia.create_sessions(
+    #                     num_sessions=1,
+    #                     sleep_after=10,
+    #                     headless=False,
+    #                     override_browser_args=[
+    #                         "--disable-blink-features=AutomationControlled"
+    #                     ],
+    #                     starting_url="https://www.tiktok.com/@pane2kvod",
+    #                 )
+    #                 await self._get_original_views(apia, self.hashtag)
+    #                 result = self._open_rawDataDict()
 
-                    lastResult = {
-                        "videoCount": int(result["videoCount"])
-                        - int(self.data["total_videos_with_tag"]),
-                        "viewCount": int(result["viewCount"])
-                        - int(self.data["total_views"]),
-                    }
-                    self.logger.info(f"{cp.BLUE}lastResult: {lastResult}{cp.RESET}")
-                    saveJson("Data/JSON/DataToResive.json", lastResult)
-                    self.data_to_resive = lastResult
-                    await apia.close_sessions()
-                    await apia.stop_playwright()
+    #                 lastResult = {
+    #                     "videoCount": int(result["videoCount"])
+    #                     - int(self.data["total_videos_with_tag"]),
+    #                     "viewCount": int(result["viewCount"])
+    #                     - int(self.data["total_views"]),
+    #                 }
+    #                 self.logger.info(f"{cp.BLUE}lastResult: {lastResult}{cp.RESET}")
+    #                 saveJson("Data/JSON/DataToResive.json", lastResult)
+    #                 self.data_to_resive = lastResult
+    #                 await apia.close_sessions()
+    #                 await apia.stop_playwright()
 
-            except Exception as e:
-                self.logger.error(f"{cp.RED}error in _get_views_async {e}{cp.RESET}")
-                try:
-                    await apia.close_sessions()
-                    await apia.stop_playwright()
-                except:
-                    pass
-            await asyncio.sleep(5)
+    #         except Exception as e:
+    #             self.logger.error(f"{cp.RED}error in _get_views_async {e}{cp.RESET}")
+    #             try:
+    #                 await apia.close_sessions()
+    #                 await apia.stop_playwright()
+    #             except:
+    #                 pass
+    #         await asyncio.sleep(5)
 
-    def _get_views(self):
-        asyncio.run(self._get_views_async())
+    # def _get_views(self):
+    #     asyncio.run(self._get_views_async())
 
     async def run(self):
         async with websockets.serve(

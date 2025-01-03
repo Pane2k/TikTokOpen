@@ -3,7 +3,7 @@ import json
 from dataclasses import dataclass
 from typing import Tuple, Optional, Dict
 
-from playwright.async_api import Page as AsyncPage
+from patchright.async_api import Page as AsyncPage
 
 from .js.chrome_app import chrome_app
 from .js.chrome_csi import chrome_csi

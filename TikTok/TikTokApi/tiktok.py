@@ -7,10 +7,10 @@ import time
 import json
 import os
 
-from playwright.async_api import async_playwright
+from patchright.async_api import async_playwright
 from urllib.parse import urlencode, quote, urlparse
 from .stealth import stealth_async
-from .helpers import random_choice
+from .helpers import random_choice  
 
 from .api.user import User
 from .api.video import Video
@@ -129,7 +129,7 @@ class TikTokApi:
             "os": platform,
             "priority_region": "",
             "referer": "",
-            "region": "US",  # TODO: TikTokAPI option
+            "region": "BY",  # TODO: TikTokAPI option
             "screen_height": screen_height,
             "screen_width": screen_width,
             "tz_name": timezone,
@@ -163,7 +163,9 @@ class TikTokApi:
             ]
             await context.add_cookies(formatted_cookies)
         page = await context.new_page()
+        # await page.add_init_script("Object.defineProperty(navigator, 'webdriver', {get: () => false})")
         await PyStealth.setup_playwright(page)
+        
 
         # Get the request headers to the url
         request_headers = None
@@ -259,12 +261,19 @@ class TikTokApi:
                 headless = False  # managed by the arg
 
             # self.browser = await self.playwright.chromium.launch_persistent_context(
-            #     user_data_dir=
-            #     headless=headless, args=override_browser_args, proxy=random_choice(proxies), executable_path=executable_path
+            #     user_data_dir="...",
+            #     channel="chrome",
+            #     headless=False,
+                
+                
+                
+            #     proxy=random_choice(proxies), 
+            #     executable_path=executable_path
             # )
             self.browser = await self.playwright.chromium.launch(
                 headless=headless,
                 args=override_browser_args,
+                
                 proxy=random_choice(proxies),
                 executable_path=executable_path,
             )

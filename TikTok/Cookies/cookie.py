@@ -1,4 +1,4 @@
-import browser_cookie3
+
 import json
 
 def getMsToken():
@@ -27,10 +27,7 @@ def get_tiktok_cookies(cookie_keys):
     json_cookie = {}
     found = False
     for cookie_fn in [
-        
-        browser_cookie3.firefox,
-        browser_cookie3.chrome,
-        browser_cookie3.brave,
+        ""
     ]:
         try:
             for cookie in cookie_fn(domain_name="tiktok.com"):
